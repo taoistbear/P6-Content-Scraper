@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/taoistbear/P6-Content-Scraper#readme",
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "json2csv": "^3.7.1",
     "x-ray": "^2.3.1"
   }
 }
