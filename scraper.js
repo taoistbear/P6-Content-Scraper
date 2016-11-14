@@ -13,13 +13,15 @@ var x = Xray();
 // x-ray basics and testing
 //******************************************************************************
 
-x('https://dribbble.com', 'li.group', [{
-  title: '.dribbble-img strong',
-  image: '.dribbble-img [data-src]@data-src',
+x('http://www.shirts4mike.com/shirt.php?id=101', '.wrapper', [{
+  title: '.breadcrumb',
+  price: '.price',
+  imageURL: '.shirt-picture img@src',
 }])
-  .paginate('.next_page@href')
-  .limit(3)
   .write('results.json')
+
+  //.paginate('.next_page@href')
+  //.limit(3)
 
 //******************************************************************************
 // CREATE FUNCTIONS FOR SCRAPE
