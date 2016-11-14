@@ -1,7 +1,7 @@
 {
   "name": "content_scraper",
   "version": "1.0.0",
-  "description": "Small scale content scraper used for a student project on a specific site",
+  "description": "Simple content scraper used for project at Treehoiuse",
   "main": "scraper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,16 +11,18 @@
     "url": "git+https://github.com/taoistbear/P6-Content-Scraper.git"
   },
   "keywords": [
-    "Treehouse",
-    "Content",
-    "Scraper",
-    "Student",
-    "Project"
+    "scraper",
+    "treehouse",
+    "projects",
+    "full-stack"
   ],
   "author": "Josh Kelly",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/taoistbear/P6-Content-Scraper/issues"
   },
-  "homepage": "https://github.com/taoistbear/P6-Content-Scraper#readme"
+  "homepage": "https://github.com/taoistbear/P6-Content-Scraper#readme",
+  "dependencies": {
+    "x-ray": "^2.3.1"
+  }
 }
