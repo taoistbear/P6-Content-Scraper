@@ -1,0 +1,30 @@
+{
+  "name": "content_scraper",
+  "version": "1.0.0",
+  "description": "Custom built content scraper to save results to a CSV file",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taoistbear/P6-Content-Scraper.git"
+  },
+  "keywords": [
+    "Scraper",
+    "Content",
+    "Custom",
+    "Treehouse"
+  ],
+  "author": "Josh Kelly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taoistbear/P6-Content-Scraper/issues"
+  },
+  "homepage": "https://github.com/taoistbear/P6-Content-Scraper#readme",
+  "dependencies": {
+    "cheerio": "latest",
+    "express": "latest",
+    "request": "latest"
+  }
+}
