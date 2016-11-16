@@ -5,10 +5,30 @@ var cheerio = require('cheerio');
 var app     = express();
 
 app.get('/scrape', function(req, res){
-  
-  url = 'http://www.shirts4mike.com/shirt.php?id=101';
 
-  request(url, function(error, response, html){
+   var mainUrl = 'http://www.shirts4mike.com/shirts.php';
+
+   var subUrl = 'http://www.shirts4mike.com/shirt.php?id=101';
+
+   var shirtLinks;
+
+   request(mainUrl, function(error, response, html){
+     if(!error){
+       var $ = cheerio.load(html);
+
+       var links = $('.products').find('li');
+       var linkNum = links.length;
+     }
+
+     res.send('There are ' + linkNum + ' links to cycle through!');
+
+     for (var i=0; i<linkNum; i++) {
+       var subUrl = 'http://www.shirts4mike.com/shirt.php?id=10' + (linkNum + 1) + '';
+     }
+
+   })
+
+  request(subUrl, function(error, response, html){
     if(!error){
       var $ = cheerio.load(html);
 
@@ -31,7 +51,7 @@ app.get('/scrape', function(req, res){
         json.price = price;
       })
 
-      sourceUrl = url;
+      sourceUrl = subUrl;
 
       json.sourceUrl = sourceUrl;
 
