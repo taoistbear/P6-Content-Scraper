@@ -2,6 +2,8 @@ P6-Content Scraper Treehouse: Full Stack Tech Degree Project
 
 Project Instructions
 
+** Building my own scraper from scratch in order to learn how and customize it the way i need and/or want
+
 01. *** DONE *** Create a 'scraper.js' file.  This should be the file that runs every day.
 02. The scraper should create a folder called 'data', if a folder called data doesn't already exist (it should check for the folder).
 03. The information from the site you scrape should be stored in a CSV file name after today's date: 2016-01-29.csv.

@@ -1,52 +1,7 @@
-//*CONTENT SCRAPER - P6 - TREEHOUSE FULL STACK TECH DEGREE
+// TREEHOUSE TECH DEGREE FULL STACK P6 CONTENT SCRAPER
 
 //******************************************************************************
-// *** REQUIRES & VARIABLES ***
-//******************************************************************************
-
-var fs = require('fs');
-// Chose x-ray due to pagination versatility and simple user interface.  Many other scrapers had/have mutliple dependancies and API was verbose and arduouse.
-var Xray = require('x-ray');
-var x = Xray();
-var json2csv = require('json2csv');
-var fields = [Title, Price, ImageURL, URL, today];
-
-//******************************************************************************
-// x-ray basics and testing
-//******************************************************************************
-
-//make file for data
-fs.openSync('data.csv', 'a', )
-
-x('http://www.shirts4mike.com/shirts.php', {
-   Title: 'img@alt',
-   Price: x('.products li a@href', '.shirt-details span@html'),
-   ImageURL: x('.products li a@href', '.shirt-picture img@src'),
-   URL: '.products li a@href',
-})
-  .write('results.json')
-
-fs.readFile('results.json', function(err, data) {
-  if (err) throw err;
-  var today = new Date();
-  fs.openSync('data.csv', 'a', function() {
-    try {
-      json2csv({ data: data, fields: fields });
-      console.log(result);
-    } catch (err) {
-      console.log(err);
-    }
-  })
-});
-
-// for tomorrow>>> try and convert to CSV before calling the open and read fs methods.
-
-//******************************************************************************
-// CREATE FUNCTIONS FOR SCRAPE
-//******************************************************************************
-
-//******************************************************************************
-// CREATE FUNCTIONS FOR CVS EXPORT
+//
 //******************************************************************************
 
 //******************************************************************************
